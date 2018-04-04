@@ -143,4 +143,6 @@ public class UserAdapter extends AbstractUserAdapterFederatedStorage {
             return super.getAttribute(name);
         }
     }
+    
+    
 }

@@ -15,6 +15,7 @@ import org.keycloak.credential.CredentialModel;
 import org.keycloak.models.FederatedIdentityModel;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.ModelException;
+import org.keycloak.models.PasswordPolicy;
 import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserCredentialModel;
 import org.keycloak.models.UserModel;
@@ -69,13 +70,17 @@ public class CidadaoStorageProvider implements
         this.model = model;
         this.identityStore = identityStore;
         //this.mapperManager = new LDAPStorageMapperManager(this);
-        this.userManager = new CidadaoStorageUserManager(this);
+        //this.userManager = new CidadaoStorageUserManager(this);
 
         supportedCredentialTypes.add(UserCredentialModel.PASSWORD);
     }
 
     public void setModel(ComponentModel model) {
         this.model = model;
+    }
+    
+    public ComponentModel getModel() {
+        return model;
     }
 
     public void setSession(KeycloakSession session) {
@@ -112,7 +117,7 @@ public class CidadaoStorageProvider implements
     	Set<FederatedIdentityModel> models = session.userFederatedStorage().getFederatedIdentities(new StorageId(cpf).getId(), realm);
     	logger.info("getUserByUsername: count federated identity model stored: " + models.size());
     	
-    	try{
+    	
     		List<UserModel> users = session.userLocalStorage().getUsers(realm);
             users.forEach(user -> 
             	logger.info("getUserByUsername: user from local storage: id: " + 
@@ -145,6 +150,7 @@ public class CidadaoStorageProvider implements
             	if (cidadao.isPrimeiroLogin()) {
             		Set<String> actions = session.userFederatedStorage().getRequiredActions(realm, userAdapter.getId());
             		
+            		
             		actions.forEach(action -> logger.info("getUserByUsername: " + action));
             		
             		if (actions.contains(RequiredAction.UPDATE_PASSWORD.toString())){
@@ -163,11 +169,7 @@ public class CidadaoStorageProvider implements
 
             return userAdapter;
     		
-    	} catch(ModelException re) {
-    		logger.error("Um erro aconteceu e nada será feito: " + re.getMessage());
-    		throw new RuntimeException("Lançada uma exceção", re);
-    		//return null;
-    	}
+    	
     	
 	}
     
@@ -200,17 +202,18 @@ public class CidadaoStorageProvider implements
 	@Override
 	public boolean isValid(RealmModel realm, UserModel user, CredentialInput input) {
 		if (!supportsCredentialType(input.getType()) || !(input instanceof UserCredentialModel)) return false;
-		logger.info("isValid: UserModel.getId() -> " + user.getId());
+		logger.info("###### isValid: UserModel.getId() -> " + user.getId());
         //UserAdapter adapter = (UserAdapter)getUserByUsername(StorageId.externalId(user.getId()), realm);
 		Cidadao cidadao = identityStore.searchById(Long.valueOf((StorageId.externalId(user.getId()))));
 
         //String password = getPassword(adapter);
 		String password = cidadao.getSenha();
         UserCredentialModel cred = (UserCredentialModel)input;
-        PolicyError error = session.getProvider(PasswordPolicyManagerProvider.class).validate(realm, user, password);
-        logger.info("isValid: input -> " + cred.getValue() + " user password -> " + password);
-        logger.info("isValid: error: " + error);
-        return password != null && password.equals(cred.getValue()) && error == null;
+        
+        //PolicyError error = session.getProvider(PasswordPolicyManagerProvider.class).validate(realm, user, password);
+        //logger.info("isValid: input -> " + cred.getValue() + " user password -> " + password);
+        //logger.info("isValid: error: " + error);
+        return password != null && password.equals(cred.getValue());
 	}
 
 	@Override
@@ -240,6 +243,9 @@ public class CidadaoStorageProvider implements
 		
 		PasswordUserCredentialModel cred = (PasswordUserCredentialModel)input;
         String password = cred.getValue();
+        logger.info("Validate:    - realm: " + realm + ", user: " + user + ", password: " + password);
+        PasswordPolicy pp = realm.getPasswordPolicy();
+        logger.info("Policies: " + pp.getPolicies().size());
         PolicyError error = session.getProvider(PasswordPolicyManagerProvider.class).validate(realm, user, password);
 		
         if (error != null) throw new ModelException(error.getMessage(), error.getParameters());

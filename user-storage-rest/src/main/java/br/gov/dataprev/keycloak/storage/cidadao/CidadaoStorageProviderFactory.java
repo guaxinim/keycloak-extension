@@ -28,6 +28,7 @@ public class CidadaoStorageProviderFactory implements
 
     @Override
     public CidadaoStorageProvider create(KeycloakSession session, ComponentModel model) {
+    	logger.info("############### PROVIDER");
     	try {
     		this.identityStore = this.restStoreRegistry.getRestStore(session, model);
             CidadaoStorageProvider provider = new CidadaoStorageProvider(this, session, model, (CidadaoIdentityStore)this.identityStore);
@@ -47,7 +48,7 @@ public class CidadaoStorageProviderFactory implements
 
     @Override
     public String getId() {
-        return "Cidadão Storage Provider";
+        return "CidadaoStorageProvider";
     }
 
     @Override
