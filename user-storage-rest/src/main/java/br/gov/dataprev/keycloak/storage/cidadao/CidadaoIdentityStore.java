@@ -11,6 +11,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
 
+import br.gov.dataprev.keycloak.storage.cidadao.jaxb.Count;
 import org.jboss.logging.Logger;
 import org.keycloak.models.ModelException;
 
@@ -138,6 +139,27 @@ public class CidadaoIdentityStore implements RESTIdentityStore<Cidadao> {
 	public void validatePassword(Cidadao entity, String senha) throws AuthenticationException {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public Integer count() {
+		Response response = null;
+
+		try {
+			response = this.api.path("cidadaos/count")
+					.request(MediaType.APPLICATION_JSON)
+					.get();
+
+			if (response.getStatus() != 200) {
+				throw new BadRequestException(response);
+			}
+
+			return response.readEntity(Count.class).getCount();
+
+		} catch(Exception e) {
+			throw new ModelException("Erro ao obter o count do CidadaoBR " , e);
+		} finally {
+			if (response != null) response.close();
+		}
 	}
 
 }

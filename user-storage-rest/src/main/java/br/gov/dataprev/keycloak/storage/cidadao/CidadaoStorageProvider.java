@@ -1,10 +1,7 @@
 
 package br.gov.dataprev.keycloak.storage.cidadao;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import org.jboss.logging.Logger;
 import org.keycloak.component.ComponentModel;
@@ -12,12 +9,7 @@ import org.keycloak.credential.CredentialInput;
 import org.keycloak.credential.CredentialInputUpdater;
 import org.keycloak.credential.CredentialInputValidator;
 import org.keycloak.credential.CredentialModel;
-import org.keycloak.models.FederatedIdentityModel;
-import org.keycloak.models.KeycloakSession;
-import org.keycloak.models.ModelException;
-import org.keycloak.models.RealmModel;
-import org.keycloak.models.UserCredentialModel;
-import org.keycloak.models.UserModel;
+import org.keycloak.models.*;
 import org.keycloak.models.UserModel.RequiredAction;
 import org.keycloak.models.cache.CachedUserModel;
 import org.keycloak.models.credential.PasswordUserCredentialModel;
@@ -31,6 +23,7 @@ import org.keycloak.storage.user.UserLookupProvider;
 
 import br.gov.dataprev.keycloak.storage.cidadao.model.Cidadao;
 import br.gov.dataprev.keycloak.storage.cidadao.model.UserAdapter;
+import org.keycloak.storage.user.UserQueryProvider;
 
 /**
  * @author <a href="mailto:wallacerock@gmail.com">Wallace Roque</a>
@@ -40,8 +33,8 @@ public class CidadaoStorageProvider implements
 		UserStorageProvider,
 		UserLookupProvider,
 		CredentialInputValidator,
-		CredentialInputUpdater
-		//UserQueryProvider,
+		CredentialInputUpdater,
+		UserQueryProvider
 //		CredentialAuthentication,
 //		ImportedUserValidation
         // OnUserCache
@@ -129,12 +122,16 @@ public class CidadaoStorageProvider implements
 	            });
             
             ///////////////////////////////////////////////////////////
-            
-            Cidadao cidadao = identityStore.searchById(Long.valueOf(cpf));
-            if (cidadao == null) {
-                return null;
-            }
-            
+
+			Cidadao cidadao = null;
+            if (isInteger(cpf, 10)) {
+				cidadao = identityStore.searchById(Long.valueOf(cpf));
+			}
+
+			if (cidadao == null) {
+				return null;
+			}
+
             //UserModel userModel = session.userLocalStorage().getUserByUsername(cpf, realm);
             
             UserAdapter userAdapter = new UserAdapter(session, realm, model, this.identityStore, cidadao);
@@ -169,6 +166,18 @@ public class CidadaoStorageProvider implements
     		//return null;
     	}
     	
+	}
+
+	public static boolean isInteger(String s, int radix) {
+		if(s.isEmpty()) return false;
+		for(int i = 0; i < s.length(); i++) {
+			if(i == 0 && s.charAt(i) == '-') {
+				if(s.length() == 1) return false;
+				else continue;
+			}
+			if(Character.digit(s.charAt(i),radix) < 0) return false;
+		}
+		return true;
 	}
     
     @Override
@@ -292,4 +301,53 @@ public class CidadaoStorageProvider implements
     	this.identityStore = restStore;
     }
 
+	@Override
+	public int getUsersCount(RealmModel realmModel) {
+		return this.identityStore.count();
+	}
+
+	@Override
+	public List<UserModel> getUsers(RealmModel realmModel) {
+		return null;
+	}
+
+	@Override
+	public List<UserModel> getUsers(RealmModel realmModel, int i, int i1) {
+		return null;
+	}
+
+	@Override
+	public List<UserModel> searchForUser(String s, RealmModel realmModel) {
+		return null;
+	}
+
+	@Override
+	public List<UserModel> searchForUser(String s, RealmModel realmModel, int i, int i1) {
+		return null;
+	}
+
+	@Override
+	public List<UserModel> searchForUser(Map<String, String> map, RealmModel realmModel) {
+		return null;
+	}
+
+	@Override
+	public List<UserModel> searchForUser(Map<String, String> map, RealmModel realmModel, int i, int i1) {
+		return null;
+	}
+
+	@Override
+	public List<UserModel> getGroupMembers(RealmModel realmModel, GroupModel groupModel, int i, int i1) {
+		return null;
+	}
+
+	@Override
+	public List<UserModel> getGroupMembers(RealmModel realmModel, GroupModel groupModel) {
+		return null;
+	}
+
+	@Override
+	public List<UserModel> searchForUserByUserAttribute(String s, String s1, RealmModel realmModel) {
+		return null;
+	}
 }
