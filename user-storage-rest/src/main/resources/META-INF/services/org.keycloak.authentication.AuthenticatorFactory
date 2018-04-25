@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 br.gov.dataprev.keycloak.authenticator.RecaptchaAuthenticatorFormFactory
-=======
-br.gov.dataprev.keycloak.authentication.DataprevAuthenticatorFactory
->>>>>>> e37b07228c22539c84abc7342532c1ebf3be74db

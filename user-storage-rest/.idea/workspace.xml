@@ -111,11 +111,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="191">
               <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="org.keycloak.authentication.AuthenticatorFactory" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -152,7 +162,6 @@
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/jaxb/CountMessageReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/CidadaoIdentityStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaAuthenticator.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory" />
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaLoginFormsSpi.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaLoginFormsProviderFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaLoginFormsProvider.java" />
@@ -162,6 +171,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/jboss-deployment-structure.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/CidadaoStorageProvider.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory" />
       </list>
     </option>
   </component>
@@ -430,12 +440,12 @@
       <workItem from="1521655591237" duration="6080000" />
       <workItem from="1524002358823" duration="2535000" />
       <workItem from="1524460009511" duration="846000" />
-      <workItem from="1524507726122" duration="21072000" />
+      <workItem from="1524507726122" duration="21169000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30533000" />
+    <option name="totallyTimeSpent" value="30630000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-104" y="-1058" width="1920" height="1058" extended-state="6" />
@@ -771,14 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/keycloak/keycloak-services/3.4.3.Final/keycloak-services-3.4.3.Final.jar!/org/keycloak/authentication/authenticators/browser/AbstractUsernameFormAuthenticator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -967,6 +969,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
