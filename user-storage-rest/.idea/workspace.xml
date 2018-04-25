@@ -12,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RecaptchaAuthenticatorForm.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RecaptchaAuthenticatorForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaAuthenticatorForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state relative-caret-position="-229">
+              <caret line="83" column="9" lean-forward="false" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4560#4561#0" expanded="true" />
@@ -30,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaAuthenticatorFormFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-811">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2514#2515#0" expanded="true" />
@@ -57,8 +57,65 @@
       <file leaf-file-name="CidadaoStorageProvider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/CidadaoStorageProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="128" column="13" lean-forward="false" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="12" column="50" lean-forward="false" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+              <folding>
+                <element signature="e#2934#2935#0" expanded="true" />
+                <element signature="e#2968#2969#0" expanded="true" />
+                <element signature="e#3012#3013#0" expanded="true" />
+                <element signature="e#3040#3041#0" expanded="true" />
+                <element signature="e#3095#3096#0" expanded="true" />
+                <element signature="e#3133#3134#0" expanded="true" />
+                <element signature="e#9413#9414#0" expanded="true" />
+                <element signature="e#9448#9449#0" expanded="true" />
+                <marker date="1524629283109" expanded="false" signature="11024:11035" ph=" { " />
+                <marker date="1524629283109" expanded="false" signature="11093:11099" ph=" }" />
+                <marker date="1524629283109" expanded="false" signature="11867:11875" ph=" { " />
+                <marker date="1524629283109" expanded="false" signature="11906:11912" ph=" }" />
+                <marker date="1524629283109" expanded="false" signature="11973:11978" ph=" { " />
+                <marker date="1524629283109" expanded="false" signature="12012:12015" ph=" }" />
+                <marker date="1524629283109" expanded="false" signature="12083:12088" ph=" { " />
+                <marker date="1524629283109" expanded="false" signature="12100:12103" ph=" }" />
+                <marker date="1524629283109" expanded="false" signature="12186:12191" ph=" { " />
+                <marker date="1524629283109" expanded="false" signature="12203:12206" ph=" }" />
+                <marker date="1524629283109" expanded="false" signature="12289:12294" ph=" { " />
+                <marker date="1524629283109" expanded="false" signature="12306:12309" ph=" }" />
+                <marker date="1524629283109" expanded="false" signature="12407:12412" ph=" { " />
+                <marker date="1524629283109" expanded="false" signature="12424:12427" ph=" }" />
+                <marker date="1524629283109" expanded="false" signature="12525:12530" ph=" { " />
+                <marker date="1524629283109" expanded="false" signature="12542:12545" ph=" }" />
+                <marker date="1524629283109" expanded="false" signature="12658:12663" ph=" { " />
+                <marker date="1524629283109" expanded="false" signature="12675:12678" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jboss-deployment-structure.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/jboss-deployment-structure.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CidadaoIdentityStore.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/CidadaoIdentityStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-171">
+              <caret line="68" column="19" lean-forward="false" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -96,15 +153,15 @@
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/CidadaoIdentityStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaAuthenticator.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/jboss-deployment-structure.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaLoginFormsSpi.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaLoginFormsProviderFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaLoginFormsProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaLoginFormsPages.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/CidadaoStorageProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaAuthenticatorFormFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaAuthenticatorForm.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/jboss-deployment-structure.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/CidadaoStorageProvider.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -373,12 +430,12 @@
       <workItem from="1521655591237" duration="6080000" />
       <workItem from="1524002358823" duration="2535000" />
       <workItem from="1524460009511" duration="846000" />
-      <workItem from="1524507726122" duration="20493000" />
+      <workItem from="1524507726122" duration="21072000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29954000" />
+    <option name="totallyTimeSpent" value="30533000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-104" y="-1058" width="1920" height="1058" extended-state="6" />
@@ -425,14 +482,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/model/Cidadao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/model/UserAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1230">
@@ -446,32 +495,12 @@
         <state relative-caret-position="4110">
           <caret line="300" column="5" lean-forward="false" selection-start-line="300" selection-start-column="5" selection-end-line="300" selection-end-column="5" />
           <folding>
-            <element signature="e#2746#2747#0" expanded="false" />
-            <element signature="e#2780#2781#0" expanded="false" />
-            <element signature="e#2835#2836#0" expanded="false" />
-            <element signature="e#2873#2874#0" expanded="false" />
-            <element signature="e#11569#11570#0" expanded="false" />
-            <element signature="e#11612#11613#0" expanded="false" />
-            <element signature="e#11675#11676#0" expanded="false" />
-            <element signature="e#11715#11716#0" expanded="false" />
-            <element signature="e#11785#11786#0" expanded="false" />
-            <element signature="e#11803#11804#0" expanded="false" />
-            <element signature="e#11888#11889#0" expanded="false" />
-            <element signature="e#11906#11907#0" expanded="false" />
-            <element signature="e#11991#11992#0" expanded="false" />
-            <element signature="e#12009#12010#0" expanded="false" />
-            <element signature="e#12109#12110#0" expanded="false" />
-            <element signature="e#12127#12128#0" expanded="false" />
-            <element signature="e#12227#12228#0" expanded="false" />
-            <element signature="e#12245#12246#0" expanded="false" />
-            <element signature="e#12360#12361#0" expanded="false" />
-            <element signature="e#12378#12379#0" expanded="false" />
-            <element signature="e#12493#12494#0" expanded="false" />
-            <element signature="e#12511#12512#0" expanded="false" />
-            <element signature="e#12611#12612#0" expanded="false" />
-            <element signature="e#12629#12630#0" expanded="false" />
-            <element signature="e#12740#12741#0" expanded="false" />
-            <element signature="e#12758#12759#0" expanded="false" />
+            <element signature="e#12792#12793#0" expanded="false" />
+            <element signature="e#12810#12811#0" expanded="false" />
+            <element signature="e#12910#12911#0" expanded="false" />
+            <element signature="e#12928#12929#0" expanded="false" />
+            <element signature="e#13039#13040#0" expanded="false" />
+            <element signature="e#13057#13058#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -498,9 +527,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -525,32 +552,12 @@
         <state relative-caret-position="3930">
           <caret line="300" column="5" lean-forward="false" selection-start-line="300" selection-start-column="5" selection-end-line="300" selection-end-column="5" />
           <folding>
-            <element signature="e#2746#2747#0" expanded="false" />
-            <element signature="e#2780#2781#0" expanded="false" />
-            <element signature="e#2835#2836#0" expanded="false" />
-            <element signature="e#2873#2874#0" expanded="false" />
-            <element signature="e#11569#11570#0" expanded="false" />
-            <element signature="e#11612#11613#0" expanded="false" />
-            <element signature="e#11675#11676#0" expanded="false" />
-            <element signature="e#11715#11716#0" expanded="false" />
-            <element signature="e#11785#11786#0" expanded="false" />
-            <element signature="e#11803#11804#0" expanded="false" />
-            <element signature="e#11888#11889#0" expanded="false" />
-            <element signature="e#11906#11907#0" expanded="false" />
-            <element signature="e#11991#11992#0" expanded="false" />
-            <element signature="e#12009#12010#0" expanded="false" />
-            <element signature="e#12109#12110#0" expanded="false" />
-            <element signature="e#12127#12128#0" expanded="false" />
-            <element signature="e#12227#12228#0" expanded="false" />
-            <element signature="e#12245#12246#0" expanded="false" />
-            <element signature="e#12360#12361#0" expanded="false" />
-            <element signature="e#12378#12379#0" expanded="false" />
-            <element signature="e#12493#12494#0" expanded="false" />
-            <element signature="e#12511#12512#0" expanded="false" />
-            <element signature="e#12611#12612#0" expanded="false" />
-            <element signature="e#12629#12630#0" expanded="false" />
-            <element signature="e#12740#12741#0" expanded="false" />
-            <element signature="e#12758#12759#0" expanded="false" />
+            <element signature="e#12792#12793#0" expanded="false" />
+            <element signature="e#12810#12811#0" expanded="false" />
+            <element signature="e#12910#12911#0" expanded="false" />
+            <element signature="e#12928#12929#0" expanded="false" />
+            <element signature="e#13039#13040#0" expanded="false" />
+            <element signature="e#13057#13058#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -559,9 +566,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -612,32 +617,12 @@
         <state relative-caret-position="3930">
           <caret line="300" column="5" lean-forward="true" selection-start-line="300" selection-start-column="5" selection-end-line="300" selection-end-column="5" />
           <folding>
-            <element signature="e#2746#2747#0" expanded="false" />
-            <element signature="e#2780#2781#0" expanded="false" />
-            <element signature="e#2835#2836#0" expanded="false" />
-            <element signature="e#2873#2874#0" expanded="false" />
-            <element signature="e#11569#11570#0" expanded="false" />
-            <element signature="e#11612#11613#0" expanded="false" />
-            <element signature="e#11675#11676#0" expanded="false" />
-            <element signature="e#11715#11716#0" expanded="false" />
-            <element signature="e#11785#11786#0" expanded="false" />
-            <element signature="e#11803#11804#0" expanded="false" />
-            <element signature="e#11888#11889#0" expanded="false" />
-            <element signature="e#11906#11907#0" expanded="false" />
-            <element signature="e#11991#11992#0" expanded="false" />
-            <element signature="e#12009#12010#0" expanded="false" />
-            <element signature="e#12109#12110#0" expanded="false" />
-            <element signature="e#12127#12128#0" expanded="false" />
-            <element signature="e#12227#12228#0" expanded="false" />
-            <element signature="e#12245#12246#0" expanded="false" />
-            <element signature="e#12360#12361#0" expanded="false" />
-            <element signature="e#12378#12379#0" expanded="false" />
-            <element signature="e#12493#12494#0" expanded="false" />
-            <element signature="e#12511#12512#0" expanded="false" />
-            <element signature="e#12611#12612#0" expanded="false" />
-            <element signature="e#12629#12630#0" expanded="false" />
-            <element signature="e#12740#12741#0" expanded="false" />
-            <element signature="e#12758#12759#0" expanded="false" />
+            <element signature="e#12792#12793#0" expanded="false" />
+            <element signature="e#12810#12811#0" expanded="false" />
+            <element signature="e#12910#12911#0" expanded="false" />
+            <element signature="e#12928#12929#0" expanded="false" />
+            <element signature="e#13039#13040#0" expanded="false" />
+            <element signature="e#13057#13058#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -664,9 +649,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1590">
           <caret line="127" column="12" lean-forward="true" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -788,16 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/CidadaoIdentityStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="68" column="51" lean-forward="false" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -810,22 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="29" column="48" lean-forward="true" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/jboss-deployment-structure.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -870,7 +827,7 @@
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -891,10 +848,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/CidadaoStorageProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaLoginFormsSpi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="128" column="13" lean-forward="false" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#381#382#0" expanded="false" />
+            <element signature="e#408#409#0" expanded="false" />
+            <element signature="e#453#454#0" expanded="false" />
+            <element signature="e#483#484#0" expanded="false" />
+            <element signature="e#556#557#0" expanded="false" />
+            <element signature="e#603#604#0" expanded="false" />
+            <element signature="e#690#691#0" expanded="false" />
+            <element signature="e#744#745#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authentication/DataprevAuthenticator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -902,7 +877,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaAuthenticatorFormFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-811">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2514#2515#0" expanded="true" />
@@ -925,33 +900,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaLoginFormsSpi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#603#604#0" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/authenticator/RecaptchaAuthenticatorForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state relative-caret-position="-229">
+          <caret line="83" column="9" lean-forward="false" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4560#4561#0" expanded="true" />
             <element signature="e#4588#4589#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/jboss-deployment-structure.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/CidadaoStorageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="50" lean-forward="false" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <folding>
+            <element signature="e#2934#2935#0" expanded="true" />
+            <element signature="e#2968#2969#0" expanded="true" />
+            <element signature="e#3012#3013#0" expanded="true" />
+            <element signature="e#3040#3041#0" expanded="true" />
+            <element signature="e#3095#3096#0" expanded="true" />
+            <element signature="e#3133#3134#0" expanded="true" />
+            <element signature="e#9413#9414#0" expanded="true" />
+            <element signature="e#9448#9449#0" expanded="true" />
+            <marker date="1524629283109" expanded="false" signature="11024:11035" ph=" { " />
+            <marker date="1524629283109" expanded="false" signature="11093:11099" ph=" }" />
+            <marker date="1524629283109" expanded="false" signature="11867:11875" ph=" { " />
+            <marker date="1524629283109" expanded="false" signature="11906:11912" ph=" }" />
+            <marker date="1524629283109" expanded="false" signature="11973:11978" ph=" { " />
+            <marker date="1524629283109" expanded="false" signature="12012:12015" ph=" }" />
+            <marker date="1524629283109" expanded="false" signature="12083:12088" ph=" { " />
+            <marker date="1524629283109" expanded="false" signature="12100:12103" ph=" }" />
+            <marker date="1524629283109" expanded="false" signature="12186:12191" ph=" { " />
+            <marker date="1524629283109" expanded="false" signature="12203:12206" ph=" }" />
+            <marker date="1524629283109" expanded="false" signature="12289:12294" ph=" { " />
+            <marker date="1524629283109" expanded="false" signature="12306:12309" ph=" }" />
+            <marker date="1524629283109" expanded="false" signature="12407:12412" ph=" { " />
+            <marker date="1524629283109" expanded="false" signature="12424:12427" ph=" }" />
+            <marker date="1524629283109" expanded="false" signature="12525:12530" ph=" { " />
+            <marker date="1524629283109" expanded="false" signature="12542:12545" ph=" }" />
+            <marker date="1524629283109" expanded="false" signature="12658:12663" ph=" { " />
+            <marker date="1524629283109" expanded="false" signature="12675:12678" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/gov/dataprev/keycloak/storage/cidadao/CidadaoIdentityStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="68" column="19" lean-forward="false" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -13,6 +13,7 @@ import javax.ws.rs.core.UriBuilder;
 
 import br.gov.dataprev.keycloak.storage.cidadao.jaxb.Count;
 import org.jboss.logging.Logger;
+import org.keycloak.models.ModelDuplicateException;
 import org.keycloak.models.ModelException;
 
 import br.gov.dataprev.keycloak.storage.cidadao.model.Cidadao;
@@ -62,9 +63,9 @@ public class CidadaoIdentityStore implements RESTIdentityStore<Cidadao> {
 				cidadao = response.readEntity(Cidadao.class);
 			}
 			
-		} catch (Exception e) {
-			throw new ModelException("Não foi possível encontrar o CPF: " + cpf, e);
-			//throw new RuntimeException(e);
+		} catch (javax.ws.rs.ProcessingException c) {
+			throw new ModelDuplicateException("serviceUnavailable");
+			
 		} finally {
 			if (response != null) response.close();
 		}
