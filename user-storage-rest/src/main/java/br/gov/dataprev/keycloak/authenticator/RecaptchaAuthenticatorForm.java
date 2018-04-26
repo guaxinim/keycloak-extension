@@ -37,8 +37,7 @@ import java.util.Map;
 public class RecaptchaAuthenticatorForm extends AbstractUsernameFormAuthenticator implements Authenticator {
 
     protected static ServicesLogger log = ServicesLogger.LOGGER;
-    protected static Integer tentativas = 0;
-    protected static boolean recaptchaOn = false;
+    private boolean recaptchaOn = false;
 
     public static final String G_RECAPTCHA_RESPONSE = "g-recaptcha-response";
     public static final String SITE_KEY = "SITE_KEY";
@@ -54,6 +53,7 @@ public class RecaptchaAuthenticatorForm extends AbstractUsernameFormAuthenticato
         }
 
         // Quando ativo o recaptcha, executa a validação antes mesmo de validar o usuário
+        recaptchaOn = (getParametro(context,"recaptcha") != null);
         if (recaptchaOn) {
             boolean ok = validateFormWithRecaptcha(context, context.form());
             if (!ok) {
@@ -72,7 +72,7 @@ public class RecaptchaAuthenticatorForm extends AbstractUsernameFormAuthenticato
             return;
         }
         context.success();
-        tentativas = 0;
+        context.getSession().removeAttribute("tentativas");
     }
 
     protected boolean validateForm(AuthenticationFlowContext context, MultivaluedMap<String, String> formData) {
@@ -80,11 +80,27 @@ public class RecaptchaAuthenticatorForm extends AbstractUsernameFormAuthenticato
         boolean valid = validateUserAndPassword(context, formData);
         // Aumenta a quantidade de tentativas de login a cada erro
         if (!valid) {
-            tentativas++;
+
+            log.info("VALOR: " + getParametro(context, "tentativas"));
+
+            Integer tentativas = 0;
+            if (isInteger(getParametro(context, "tentativas"), 10))
+                tentativas = Integer.valueOf(getParametro(context, "tentativas"));
+            setParametro(context, "tentativas", String.valueOf(++tentativas));
+
         }
 
         return valid;
     }
+
+    private String getParametro(AuthenticationFlowContext context, String chave) {
+        return (String) context.getAuthenticationSession().getUserSessionNotes().get(chave);
+    }
+
+    private void setParametro(AuthenticationFlowContext context, String chave, String valor) {
+        context.getAuthenticationSession().setUserSessionNote(chave, valor);
+    }
+
 
     @Override
     public void authenticate(AuthenticationFlowContext context) {
@@ -132,24 +148,31 @@ public class RecaptchaAuthenticatorForm extends AbstractUsernameFormAuthenticato
             // Recaptcha não configurado
             form.setAttribute("recaptchaRequired", false);
         } else {
-            Integer quantidade_erros = null;
-
+            Integer quantidade_erros = 9999;
             if (isInteger(captchaConfig.getConfig().get(QUANTIDADE_ERROS_LOGIN), 10)) {
                 quantidade_erros = Integer.valueOf(captchaConfig.getConfig().get(QUANTIDADE_ERROS_LOGIN));
             }
+
+            Integer tentativas = 0;
+            if (isInteger(getParametro(context, "tentativas"), 10)) {
+                tentativas = Integer.valueOf(getParametro(context, "tentativas"));
+            }
+
+            log.info("TENTATIVAS: " + tentativas);
+            log.info("MAXIMO: " + quantidade_erros);
 
             // Exibe o recaptcha caso exceda a quantidade de tentativas
             if (quantidade_erros != null && tentativas >= quantidade_erros) {
                 form.setAttribute("recaptchaRequired", true);
                 form.setAttribute("recaptchaSiteKey", captchaConfig.getConfig().get(SITE_KEY));
                 form.addScript("https://www.google.com/recaptcha/api.js");
-                recaptchaOn = true;
+                setParametro(context, "recaptcha", "true");
             }
         }
     }
 
     public static boolean isInteger(String s, int radix) {
-        if(s.isEmpty()) return false;
+        if(s == null || s.isEmpty()) return false;
         for(int i = 0; i < s.length(); i++) {
             if(i == 0 && s.charAt(i) == '-') {
                 if(s.length() == 1) return false;
