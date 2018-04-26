@@ -29,15 +29,13 @@ import org.keycloak.util.JsonSerialization;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class RecaptchaAuthenticatorForm extends AbstractUsernameFormAuthenticator implements Authenticator {
 
     protected static ServicesLogger log = ServicesLogger.LOGGER;
     private boolean recaptchaOn = false;
+    private Map<String,String> recaptcha = new HashMap<>();
 
     public static final String G_RECAPTCHA_RESPONSE = "g-recaptcha-response";
     public static final String SITE_KEY = "SITE_KEY";
@@ -72,7 +70,8 @@ public class RecaptchaAuthenticatorForm extends AbstractUsernameFormAuthenticato
             return;
         }
         context.success();
-        context.getSession().removeAttribute("tentativas");
+        removeParametro(context,"tentativas");
+        removeParametro(context,"recaptcha");
     }
 
     protected boolean validateForm(AuthenticationFlowContext context, MultivaluedMap<String, String> formData) {
@@ -80,8 +79,6 @@ public class RecaptchaAuthenticatorForm extends AbstractUsernameFormAuthenticato
         boolean valid = validateUserAndPassword(context, formData);
         // Aumenta a quantidade de tentativas de login a cada erro
         if (!valid) {
-
-            log.info("VALOR: " + getParametro(context, "tentativas"));
 
             Integer tentativas = 0;
             if (isInteger(getParametro(context, "tentativas"), 10))
@@ -94,13 +91,16 @@ public class RecaptchaAuthenticatorForm extends AbstractUsernameFormAuthenticato
     }
 
     private String getParametro(AuthenticationFlowContext context, String chave) {
-        return (String) context.getAuthenticationSession().getUserSessionNotes().get(chave);
+        return recaptcha.get(chave+context.getConnection().getRemoteAddr()+context.getHttpRequest().getHttpHeaders().getRequestHeader("User-Agent"));
     }
 
     private void setParametro(AuthenticationFlowContext context, String chave, String valor) {
-        context.getAuthenticationSession().setUserSessionNote(chave, valor);
+        recaptcha.put(chave+context.getConnection().getRemoteAddr()+context.getHttpRequest().getHttpHeaders().getRequestHeader("User-Agent"), valor);
     }
 
+    private void removeParametro(AuthenticationFlowContext context, String chave) {
+        recaptcha.remove(chave+context.getConnection().getRemoteAddr()+context.getHttpRequest().getHttpHeaders().getRequestHeader("User-Agent"));
+    }
 
     @Override
     public void authenticate(AuthenticationFlowContext context) {
@@ -157,9 +157,6 @@ public class RecaptchaAuthenticatorForm extends AbstractUsernameFormAuthenticato
             if (isInteger(getParametro(context, "tentativas"), 10)) {
                 tentativas = Integer.valueOf(getParametro(context, "tentativas"));
             }
-
-            log.info("TENTATIVAS: " + tentativas);
-            log.info("MAXIMO: " + quantidade_erros);
 
             // Exibe o recaptcha caso exceda a quantidade de tentativas
             if (quantidade_erros != null && tentativas >= quantidade_erros) {
